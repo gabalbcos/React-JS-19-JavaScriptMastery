@@ -1,7 +1,19 @@
 import React from 'react'
 
-export const Search = (searchTerm, setSearchTerm) => {
+export const Search = ({searchTerm, setSearchTerm}) => {
   return (
-    <div className="text-white text-3xl">{searchTerm}</div>
+    <div className="search">
+      <div className="">
+      <img src="search.png" alt="serarch" />
+      <input 
+      type="text"
+      placeholder="Search through thousands of movies"
+      value={searchTerm }
+      onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      </div>
+
+    </div>
+    
   )
 }
